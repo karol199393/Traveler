@@ -1,7 +1,6 @@
 package com.example.Traveler.controller;
 
-import com.example.Traveler.entity.Trail;
-import com.example.Traveler.entity.Traveler;
+import com.example.Traveler.model.entity.Traveler;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,6 +42,9 @@ public class TravelLog {
         TravelLog updateTravelLog = new TravelLog();
         return ResponseEntity.ok(updateTravelLog);
     }
-
+    @GetMapping("/findByName")
+    public TravelLog findByName(String name) {
+        return null;
+    }
 
 }

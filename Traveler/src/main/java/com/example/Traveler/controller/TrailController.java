@@ -1,18 +1,18 @@
 package com.example.Traveler.controller;
 
-import com.example.Traveler.entity.Trail;
+import com.example.Traveler.model.entity.Trail;
 import com.example.Traveler.service.TrailService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.Collections; //użycie klasy Collections
+import java.util.List; //użycie klasy List
+import java.util.Map; //użycie klasy Map
 
 @RestController
-@RequestMapping("/trails")
+@RequestMapping("/trails") //zapytanie o mapowanie
 public class TrailController {
     private final TrailService trailService;
     @Autowired
