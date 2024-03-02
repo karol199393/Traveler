@@ -1,5 +1,5 @@
 
-
+/*
 import com.example.Traveler.model.dto.TravelLogDto;
 import com.example.Traveler.model.entity.TravelLog;
 import lombok.RequiredArgsConstructor;
@@ -24,3 +24,4 @@ public class TravelerLogMapper {
     }
 
 }
+*/

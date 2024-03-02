@@ -1,5 +1,5 @@
 package com.example.Traveler.controller;
-
+/*
 import com.example.Traveler.mapper.TravelerMapper;
 import com.example.Traveler.model.dto.TravelerDto;
 import com.example.Traveler.model.entity.Traveler;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/*
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/travelers")
