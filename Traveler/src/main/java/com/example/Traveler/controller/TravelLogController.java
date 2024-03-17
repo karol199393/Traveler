@@ -1,3 +1,4 @@
+/*
 package com.example.Traveler.controller;
 
 import com.example.Traveler.model.entity.Traveler;
@@ -10,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/travelLog")
-public class TravelLog {
+public class TravelLogController {
     //Logika pobierania wszystkich logów podróży
     @GetMapping
     public List<Traveler> getAllTravelLogs() {
@@ -23,12 +24,12 @@ public class TravelLog {
     }
     //Logika dodawania nowego logu podróży
     @PostMapping
-    public TravelLog createTravelLog(@RequestBody TravelLog travelLog) {
+    public TravelLogController createTravelLog(@RequestBody TravelLogController travelLog) {
         return travelLog;
     }
     //Logika aktualizacji logu podróży
     @PostMapping("/{id}")
-    public TravelLog updateTravelLog(@PathVariable Long id,@RequestBody TravelLog travelerDetails) {
+    public TravelLogController updateTravelLog(@PathVariable Long id, @RequestBody TravelLogController travelerDetails) {
         return travelerDetails;
     }
     //Logika usuwania logu podróży
@@ -38,13 +39,14 @@ public class TravelLog {
 
     //Logika częściowa aktualizacji logu podróży
     @PatchMapping("/{id}")
-    public ResponseEntity<TravelLog> partialUpdateTravelLog(@PathVariable Long id, @RequestBody Map<String, Object> updates) {
-        TravelLog updateTravelLog = new TravelLog();
+    public ResponseEntity<TravelLogController> partialUpdateTravelLog(@PathVariable Long id, @RequestBody Map<String, Object> updates) {
+        TravelLogController updateTravelLog = new TravelLogController();
         return ResponseEntity.ok(updateTravelLog);
     }
     @GetMapping("/findByName")
-    public TravelLog findByName(String name) {
+    public TravelLogController findByName(String name) {
         return null;
     }
 
 }
+*/

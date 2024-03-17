@@ -1,7 +1,8 @@
 package com.example.Traveler.service;
 
+import com.example.Traveler.model.entity.TravelLog;
 import org.springframework.stereotype.Service;
-import pl.wedrowkikodu.trailblazer.model.entity.TravelLog;
+
 
 import java.util.List;
 import java.util.Optional;

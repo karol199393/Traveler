@@ -2,6 +2,7 @@ package com.example.Traveler.service;
 
 import com.example.Traveler.exception.ResourceNotFoundException;
 import com.example.Traveler.model.entity.Traveler;
+//import com.example.Traveler.repository.TravelerRepository;
 import com.example.Traveler.repository.TravelerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,7 @@ public class TravelerServiceImpl implements TravelerService {
     }
 
     private void updateTraveler(Traveler traveler, Traveler objectDetails) {
-        traveler.setName(objectDetails.getName());
+        traveler.setUsername(objectDetails.getUsername());
         traveler.setEmail(objectDetails.getEmail());
         updateTravelLogs(traveler, objectDetails);
     }

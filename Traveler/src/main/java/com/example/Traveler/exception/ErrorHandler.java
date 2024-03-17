@@ -1,4 +1,4 @@
-package com.example.Traveler.exception;
+/* package com.example.Traveler.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -22,3 +22,5 @@ public class ErrorHandler {
 }
 
 // Path: Traveler.java
+
+ */
