@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "trail")
+@Table(name = "trails")
 @Entity
 public class Trail {
     @Id

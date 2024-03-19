@@ -1,4 +1,4 @@
-/*
+
 package com.example.Traveler.controller;
 
 import com.example.Traveler.model.entity.Traveler;
@@ -49,4 +49,3 @@ public class TravelLogController {
     }
 
 }
-*/

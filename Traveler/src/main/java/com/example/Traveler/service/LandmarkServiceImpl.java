@@ -1,6 +1,7 @@
 package com.example.Traveler.service;
 
 import com.example.Traveler.model.entity.Landmark;
+import com.example.Traveler.repository.LandmarkRepository;
 import org.springframework.stereotype.Service;
 
 
@@ -9,20 +10,27 @@ import java.util.Optional;
 
 @Service
 public class LandmarkServiceImpl implements LandmarkService {
+    LandmarkRepository landmarkRepository;
+
+    public LandmarkServiceImpl(LandmarkRepository landmarkRepository) {
+        this.landmarkRepository = landmarkRepository;
+    }
+
 
     @Override
     public List<Landmark> findAll() {
-        return null;
+        return landmarkRepository.findAll();
     }
+
 
     @Override
     public Optional<Landmark> findById(Long id) {
-        return Optional.empty();
+        return landmarkRepository.findById(id);
     }
 
     @Override
     public Landmark save(Landmark object) {
-        return null;
+        return landmarkRepository.save(object);
     }
 
     @Override
