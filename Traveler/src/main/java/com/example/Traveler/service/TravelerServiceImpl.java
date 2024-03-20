@@ -59,4 +59,9 @@ public class TravelerServiceImpl implements TravelerService {
                 throw new ResourceNotFoundException("Traveler not found with id: " + id);
             });
     }
+
+
+    public Object getData() {
+        return null;
+    }
 }

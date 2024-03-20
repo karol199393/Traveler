@@ -36,7 +36,6 @@ public class TravelLogController {
     @DeleteMapping("/{id}")
     public void deleteTravelLog(@PathVariable Long id) {
     }
-
     //Logika częściowa aktualizacji logu podróży
     @PatchMapping("/{id}")
     public ResponseEntity<TravelLogController> partialUpdateTravelLog(@PathVariable Long id, @RequestBody Map<String, Object> updates) {

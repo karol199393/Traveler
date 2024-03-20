@@ -9,4 +9,6 @@ public interface BaseCrudService<T> {
     T save(T object);
     T update(Long id, T objectDetails);
     void delete(Long id);
+
+
 }

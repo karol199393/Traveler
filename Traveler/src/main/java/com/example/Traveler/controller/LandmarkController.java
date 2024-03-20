@@ -2,23 +2,22 @@ package com.example.Traveler.controller;
 
 import com.example.Traveler.model.entity.Landmark;
 import com.example.Traveler.service.LandmarkService;
+import com.example.Traveler.service.LandmarkServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController
 @RequestMapping("/landmarks")
 public class LandmarkController {
-    private LandmarkService landmarkService;
-
-    public LandmarkController(LandmarkService landmarkService) {
+    private final LandmarkServiceImpl landmarkService;
+    public LandmarkController(LandmarkServiceImpl landmarkService) {
         this.landmarkService = landmarkService;
     }
     //Logika pobierania nowych tras
     @GetMapping("/getAll")
-  public ResponseEntity<List<Landmark>> getAllLandmarks() {
+    public ResponseEntity<List<Landmark>> getAllLandmarks() {
         List<Landmark> landmarks = landmarkService.findAll();
         return ResponseEntity.ok(landmarks);
     }

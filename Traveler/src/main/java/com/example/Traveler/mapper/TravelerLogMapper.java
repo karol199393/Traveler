@@ -17,7 +17,6 @@ public class TravelerLogMapper {
                 .map(this::mapToDto)
                 .toList();
     }
-
     public TravelLogDto mapToDto(TravelLog travelLog) {
         return new TravelLogDto(travelLog.getId(), travelLog.getDate().toString(), travelLog.getNotes(),
                 travelLog.getTraveler().getUsername(), travelLog.getTrail().getName());

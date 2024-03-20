@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class LandmarkServiceImpl implements LandmarkService {
+public class LandmarkServiceImpl implements BaseCrudService<Landmark> {
     LandmarkRepository landmarkRepository;
 
     public LandmarkServiceImpl(LandmarkRepository landmarkRepository) {
@@ -41,5 +41,14 @@ public class LandmarkServiceImpl implements LandmarkService {
     @Override
     public void delete(Long id) {
 
+    }
+
+    public String getLandmarkDescription() {
+     return "Statue";
+    }
+
+
+    public Object getData() {
+        return null;
     }
 }

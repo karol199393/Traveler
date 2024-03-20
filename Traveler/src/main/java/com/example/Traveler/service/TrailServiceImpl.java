@@ -34,4 +34,9 @@ public class TrailServiceImpl implements TrailService {
     public void delete(Long id) {
 
     }
+
+    @Override
+    public Trail addTrail(Trail trail) {
+        return null;
+    }
 }

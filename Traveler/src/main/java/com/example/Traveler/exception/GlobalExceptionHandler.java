@@ -13,7 +13,6 @@ public class GlobalExceptionHandler {
 // Struktura odpowiedzi, np. zwracająca kod błędu 404 Not Found
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object>handleGlobalException(Exception ex, WebRequest request) {
 // Ogólna obsługa wyjątków, np. zwracająca kod błędu 500 Internal Server Error

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TravelerMapper {
 
+
     private final TravelerLogMapper travelerLogMapper;
 
     public Traveler mapToTraveler(TravelerDto dto) {
@@ -18,7 +19,7 @@ public class TravelerMapper {
         traveler.setId(dto.id());
         traveler.setUsername(dto.name());
         traveler.setEmail(dto.email());
-        return new Traveler();
+        return traveler;
     }
 
     public TravelerDto mapToDto(Traveler traveler) {

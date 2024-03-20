@@ -5,4 +5,5 @@ import com.example.Traveler.service.BaseCrudService;
 
 public interface TrailService extends BaseCrudService<Trail> {
 
+    Trail addTrail(Trail trail);
 }
