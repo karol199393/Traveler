@@ -4,6 +4,7 @@ import com.example.Traveler.mapper.TravelerMapper;
 import com.example.Traveler.model.dto.TravelerDto;
 import com.example.Traveler.model.entity.Traveler;
 import com.example.Traveler.service.TravelerService;
+import com.example.Traveler.service.TravelerServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ import java.util.List;
 public class TravelerController {
 
     private final TravelerMapper travelerMapper;
-    private final TravelerService travelerService;
+    private final TravelerServiceImpl travelerService;
     @GetMapping
     public ResponseEntity<List<TravelerDto>> getAllTravelers() {
         List<Traveler> travelers = travelerService.findAll();

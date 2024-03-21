@@ -35,10 +35,8 @@ public class TravelerControllerTest {
 
     @MockBean
     private TravelerMapper travelerMapper;
-
     @MockBean
     private TravelerService travelerService;
-
     @Autowired
     private MockMvc mockMvc;
 
@@ -63,7 +61,6 @@ public class TravelerControllerTest {
                         .contentType("application/json"))
                 .andExpect(status().isNotFound());
     }
-
     @Test
     public void shouldReturnAllTravelers() throws Exception {
         final Traveler traveler = createTraveler();

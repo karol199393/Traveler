@@ -23,10 +23,4 @@ public class Review {
     private String image;
     @ManyToOne
     private Traveler traveler;
-
-
-
-
-
-
 }

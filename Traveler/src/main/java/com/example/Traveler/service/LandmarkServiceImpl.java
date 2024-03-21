@@ -35,16 +35,17 @@ public class LandmarkServiceImpl implements BaseCrudService<Landmark> {
 
     @Override
     public Landmark update(Long id, Landmark objectDetails) {
-        return null;
+        return landmarkRepository.save(objectDetails);
     }
 
     @Override
     public void delete(Long id) {
-
+        landmarkRepository.deleteById(id);
     }
 
     public String getLandmarkDescription() {
-     return "Statue";
+
+        return  "Landmark Description";
     }
 
 

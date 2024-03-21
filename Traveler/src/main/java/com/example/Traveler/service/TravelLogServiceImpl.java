@@ -10,6 +10,7 @@ import java.util.Optional;
 @Service
 public class TravelLogServiceImpl implements TravelLogService {
 
+
     @Override
     public List<TravelLog> findAll() {
         return null;

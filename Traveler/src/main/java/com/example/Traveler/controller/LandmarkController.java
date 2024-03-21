@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @RestController
 @RequestMapping("/landmarks")
 public class LandmarkController {
@@ -31,7 +33,10 @@ public class LandmarkController {
     public Landmark createLandmark( @RequestBody Landmark landmark) {
         return landmarkService.save(landmark);
     }
-
-
+    //Logika usuwania trasy
+    @DeleteMapping("delete/{id}")
+    public void deleteLandmark(@PathVariable Long id) {
+        landmarkService.delete(id);
+    }
 
 }
