@@ -34,8 +34,9 @@ public class Trail {
     @JoinColumn(name = "trail_id")
     private List<Landmark> landmarks;
 
-    public Trail(String testTrail, double v, String easy) {
-    }
+
+
+
 }
 
 

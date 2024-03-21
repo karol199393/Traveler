@@ -60,9 +60,5 @@ public class TravelLogController {
         TravelLogController updateTravelLog = new TravelLogController(travelLogService);
         return ResponseEntity.ok(updateTravelLog);
     }
-    @GetMapping("/findByName")
-    public TravelLogController findByName(String name) {
-        return null;
-    }
 
 }

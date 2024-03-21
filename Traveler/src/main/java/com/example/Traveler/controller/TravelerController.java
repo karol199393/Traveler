@@ -19,8 +19,10 @@ import java.util.List;
 @RequestMapping("/travelers")
 public class TravelerController {
 
+    private final TravelerService travelerService;
     private final TravelerMapper travelerMapper;
-    private final TravelerServiceImpl travelerService;
+
+
     @GetMapping
     public ResponseEntity<List<TravelerDto>> getAllTravelers() {
         List<Traveler> travelers = travelerService.findAll();

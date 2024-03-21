@@ -22,4 +22,6 @@ public class ExampleTest {
         when(exampleService.getName(true)).thenReturn("Hello");
         assertEquals("Hello", exampleService.getName(true));
     }
+
+
 }

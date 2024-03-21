@@ -20,37 +20,34 @@ public class TrailController {
         this.trailService = trailService;
     }
     //Logika pobierania nowych tras
-    @GetMapping
+    @GetMapping("/getAll")
     public List<Trail> getAllTrails() {
-        return Collections.emptyList();
+        return trailService.findAll();
     }
     //Logika pobierania trasy po id
     @GetMapping("/{id}")
-    public Trail getTrailById(@PathVariable Long id) {
-        return null;
+    public Object getTrailById(@PathVariable Long id) {
+        return trailService.findById(id);
     }
     //Logika dodawania nowej trasy
-    @PostMapping
-    /*public Trail createTrail(@Valid @RequestBody Trail trail) {
-        return null;
-    } */
+    @PostMapping("/create")
+    public Trail createTrail(@RequestBody Trail trail) {
+        return trailService.addTrail(trail);
+    }
     //Logika aktualizacji trasy
-    @PutMapping("/{id}")
-    public Trail updateTrail(@PathVariable Long id, @RequestBody Trail trailDetails) {
-        return trailDetails;
-    }
-    //Logika usuwania trasy
-    @DeleteMapping("/{id}")
+    @PutMapping("update/{id}")
+    public Trail updateTrail(@PathVariable Long id, @RequestBody Trail trailDetails)   {
+        return trailService.update(id, trailDetails);
+    }//Logika usuwania trasy
+    @DeleteMapping("delete/{id}")
     public void deleteTrail(@PathVariable Long id) {
+        trailService.delete(id);
     }
-
     //Logika częściowej aktualizacji trasy
-    @PatchMapping("/{id}")
+    @PatchMapping("patch/{id}")
     public ResponseEntity<Trail> partialUpdateTrail(@PathVariable Long id, @RequestBody Map<String, Object> updates) {
         Trail updateTrail = new Trail();
         return ResponseEntity.ok(updateTrail);
     }
-
-
 
 }
