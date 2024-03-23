@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/review")
 public class ReviewController {
     private ReviewService reviewService;
-
     public ReviewController(ReviewService reviewService) {
         this.reviewService = reviewService;
     }
@@ -36,7 +35,5 @@ public class ReviewController {
     public Object getData() {
         return reviewService.getData();
     }
-
-
 
 }

@@ -23,4 +23,7 @@ public class Review {
     private String image;
     @ManyToOne
     private Traveler traveler;
+
+    public Review(String s, int i, String date, String amazingHotelStay, String newYork, String hotel, String url, Traveler traveler) {
+    }
 }

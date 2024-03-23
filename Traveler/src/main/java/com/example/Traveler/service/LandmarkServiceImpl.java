@@ -15,41 +15,31 @@ public class LandmarkServiceImpl implements BaseCrudService<Landmark> {
     public LandmarkServiceImpl(LandmarkRepository landmarkRepository) {
         this.landmarkRepository = landmarkRepository;
     }
-
-
     @Override
     public List<Landmark> findAll() {
         return landmarkRepository.findAll();
     }
-
-
     @Override
     public Optional<Landmark> findById(Long id) {
         return landmarkRepository.findById(id);
     }
-
     @Override
     public Landmark save(Landmark object) {
         return landmarkRepository.save(object);
     }
-
     @Override
     public Landmark update(Long id, Landmark objectDetails) {
         return landmarkRepository.save(objectDetails);
     }
-
     @Override
     public void delete(Long id) {
         landmarkRepository.deleteById(id);
     }
-
     public String getLandmarkDescription() {
-
         return  "Landmark Description";
     }
-
-
     public Object getData() {
         return null;
     }
+
 }

@@ -25,7 +25,6 @@ import java.time.LocalDateTime;
 @Table(name = "travel_logs")
 @Entity
 public class TravelLog {
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "travel_log_seq_gen")
     @SequenceGenerator(name = "travel_log_seq_gen", sequenceName = "travel_log_seq", allocationSize = 1)

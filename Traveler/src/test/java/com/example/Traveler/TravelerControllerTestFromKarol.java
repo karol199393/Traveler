@@ -17,10 +17,8 @@ import static org.mockito.Mockito.when;
 public class TravelerControllerTestFromKarol {
     @Mock
     private TravelerService travelerService;
-
     @InjectMocks
     private TravelerController travelerController;
-
     @Test
     @MockitoSettings(strictness = Strictness.LENIENT)
     public void test() {
@@ -30,8 +28,6 @@ public class TravelerControllerTestFromKarol {
         String result = travelerController.getData();
         //sprawdzenie rezultatu
         assertEquals("EqualsStrings", result);
-
-
     }
 
 }

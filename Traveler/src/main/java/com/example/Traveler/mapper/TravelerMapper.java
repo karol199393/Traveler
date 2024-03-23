@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class TravelerMapper {
 
-
     private final TravelerLogMapper travelerLogMapper;
 
     public Traveler mapToTraveler(TravelerDto dto) {

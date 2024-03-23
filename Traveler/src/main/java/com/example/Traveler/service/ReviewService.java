@@ -10,11 +10,9 @@ public class ReviewService {
     public ReviewService(ReviewRepository reviewRepository) {
         this.reviewRepository = reviewRepository;
     }
-
     public String getReviewDescription() {
         return "This is a review";
     }
-
     public Object getAllReview() {
         return reviewRepository.findAll();
     }
@@ -27,15 +25,11 @@ public class ReviewService {
     public Review updateReview(Long id, Review reviewDetails) {
         return reviewRepository.save(reviewDetails);
     }
-
     public Object getData() {
         return "This is a data";
     }
-
     public void delete(Long id) {
         reviewRepository.deleteById(id);
     }
-
-
 
 }

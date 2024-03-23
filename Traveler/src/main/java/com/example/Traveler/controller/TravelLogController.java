@@ -19,10 +19,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/travelLog")
 public class TravelLogController {
-
     TravelLogServiceImpl travelLogService;
     TravelerLogMapper travelLogMapper;
-
     public TravelLogController(TravelLogServiceImpl travelLogService) {
         this.travelLogService = travelLogService;
     }
@@ -37,8 +35,6 @@ public class TravelLogController {
     public Optional<TravelLog> getTravelLogById(@PathVariable Long id) {
         return travelLogService.findById(id);
     }
-
-
     //Logika dodawania nowego logu podróży
     @PostMapping
     public TravelLogController createTravelLog(@RequestBody TravelLogController travelLog) {

@@ -18,11 +18,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/travelers")
 public class TravelerController {
-
     private final TravelerService travelerService;
     private final TravelerMapper travelerMapper;
-
-
     @GetMapping
     public ResponseEntity<List<TravelerDto>> getAllTravelers() {
         List<Traveler> travelers = travelerService.findAll();
@@ -52,5 +49,4 @@ public class TravelerController {
     public String getData() {
         return "EqualsStrings";
     }
-
 }

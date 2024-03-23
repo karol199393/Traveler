@@ -38,5 +38,4 @@ public class LandmarkController {
     public void deleteLandmark(@PathVariable Long id) {
         landmarkService.delete(id);
     }
-
 }

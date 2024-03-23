@@ -40,18 +40,15 @@ public class TravelerServiceImpl implements TravelerService {
 
         return travelerRepository.save(traveler);
     }
-
     private void updateTraveler(Traveler traveler, Traveler objectDetails) {
         traveler.setUsername(objectDetails.getUsername());
         traveler.setEmail(objectDetails.getEmail());
         updateTravelLogs(traveler, objectDetails);
     }
-
     private void updateTravelLogs(Traveler traveler, Traveler objectDetails) {
         traveler.getTravelLogs().clear();
         traveler.getTravelLogs().addAll(objectDetails.getTravelLogs());
     }
-
     @Override
     public void delete(Long id) {
         travelerRepository.findById(id)
@@ -59,8 +56,6 @@ public class TravelerServiceImpl implements TravelerService {
                 throw new ResourceNotFoundException("Traveler not found with id: " + id);
             });
     }
-
-
     public Object getData() {
         return null;
     }

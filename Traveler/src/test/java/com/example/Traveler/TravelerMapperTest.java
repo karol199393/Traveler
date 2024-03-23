@@ -35,9 +35,7 @@ public class TravelerMapperTest {
     @Test
     public void shouldMapToTraveler() {
         TravelerDto dto = createTravelerDto();
-
         Traveler traveler = travelerMapper.mapToTraveler(dto);
-
         assertEquals(dto.id(), traveler.getId());
         assertEquals(dto.name(), traveler.getUsername());
         assertEquals(dto.email(), traveler.getEmail());

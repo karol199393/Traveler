@@ -11,7 +11,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Component
 public class TravelerLogMapper {
-
     public List<TravelLogDto> mapToDto(List<TravelLog> travelLogs) {
         return travelLogs.stream()
                 .map(this::mapToDto)
