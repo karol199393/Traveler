@@ -23,10 +23,6 @@ public class ReviewController {
     public Review addReview(@RequestBody Review review){
         return reviewService.addReview(review);
     }
-    @GetMapping("/description")
-    public String getReviewDescription() {
-        return reviewService.getReviewDescription();
-    }
     @DeleteMapping("delete/{id}")
     public void deleteReview(@PathVariable Long id) {
         reviewService.delete(id);

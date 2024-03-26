@@ -22,24 +22,14 @@ public class ReviewControllerTest {
     public void testGetAllReview() {
         reviewController.getAllReview();
     }
-
-
     @Test
     public void testGetReviewById() {
         reviewController.getReviewById(1L);
     }
-
-
     @Test
     public void testAddReview() {
         reviewController.addReview(new Review());
     }
-
-    @Test
-    public void testGetReviewDescription() {
-        reviewController.getReviewDescription();
-    }
-
     @Test
     public void testDeleteReview() {
         reviewController.deleteReview(1L);

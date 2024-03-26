@@ -10,9 +10,6 @@ public class ReviewService {
     public ReviewService(ReviewRepository reviewRepository) {
         this.reviewRepository = reviewRepository;
     }
-    public String getReviewDescription() {
-        return "This is a review";
-    }
     public Object getAllReview() {
         return reviewRepository.findAll();
     }
